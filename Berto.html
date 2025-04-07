@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="BBS.css" title="" type=""/>
+  <title>Personal Gallery</title>
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: pink;
+      color: magenta;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: pink;
+      color: magenta;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border:1px solid;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    /* Navigation Buttons */
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: pink;
+      color: magenta;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: pink;
+      transform: translateY(-3px);
+      border:10px solid;
+    }
+
+    /* Section Tiles */
+    .tile {
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 800px;
+      background-color: pink;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid #ddd;
+    }
+
+    .tile:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      border:10px solid;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: pink;
+      color: magenta;
+      width: 100%;
+      margin-top: 20px;
+      box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Gallery Styles */
+    .gallery-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+    }
+
+    .gallery-item {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+      background-color: magenta;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .gallery-item img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 25px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.5);
+    }
+
+    /* Hidden Sections */
+    .hidden {
+      display: none;
+    }
+
+    /* About Me Section */
+    #about p {
+      font-size: 1.1rem;
+      color: magenta;
+    }
+
+    /* Contact Section */
+    #contact ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    #contact ul li {
+      margin: 10px 0;
+    }
+
+    #contact ul li a {
+      color: #1abc9c;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    #contact ul li a:hover {
+      color: magenta;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Welcome to My Personal Gallery</h1>
+    <nav>
+      <ul>
+        <li><a href="#about" onclick="showSection('about')">About Me</a></li>
+        <li><a href="#contact" onclick="showSection('contact')">Contact & Social Media</a></li>
+        <li><a href="#gallery" onclick="showSection('gallery')">Photo Gallery</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Me Section -->
+  <section id="about" class="tile">
+    <h2>About Me</h2>
+    <p>Hello my name is Brix Kelly Bernardo 18yrs old and this is my personal gallery.</p>
+  </section>
+
+  <!-- Contact & Social Media Section -->
+  <section id="contact" class="tile hidden">
+    <h2>Contact & Social Media</h2>
+    <p>If you'd like to connect with me, feel free to reach out via email or follow me on social media:</p>
+    <ul>
+      <li>Email: <a href="mailto:your.email@example.com">kellybrix334@gmail.com</a></li>
+      <li>Instagram: <a href="https://instagram.com/yourprofile">@slim_klly</a></li>
+      <li>Twitter: <a href="https://twitter.com/yourprofile">@babebibobo001</a></li>
+    </ul>
+  </section>
+
+  <!-- Photo Gallery Section -->
+  <section id="gallery" class="tile hidden">
+    <h2>Photo Gallery</h2>
+    <div class="gallery-container">
+      <div class="gallery-item"><img src="/storage/emulated/0/bb.html/received_585088147604823.jpeg" alt=></div>
+      <div class="gallery-item"><img src="/storage/emulated/0/bb.html/Messenger_creation_254837C4-C2DD-42F6-8945-1CF819845210.jpeg" alt="Photo 2"></div>
+      <div class="gallery-item"><img src="/storage/emulated/0/bb.html/received_1312341466680297.jpeg" alt="Photo 3"></div>
+      <div class="gallery-item"><img src="/storage/emulated/0/bb.html/Messenger_creation_D0FE17E7-9C7B-41FD-B6A4-6D0AD9EE3148 (1).jpeg" alt="Photo 4"></div>
+      <div class="gallery-item"><img src="/storage/emulated/0/bb.html/received_2120626458396521.jpeg"alt="Photo 5"></div>
+      <div class="gallery-item"><img src="/storage/emulated/0/bb.html/IMG_20241203_142835_213.jpg" alt="Photo 6"></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; BEVERLY. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // JavaScript to toggle sections
+    function showSection(sectionId) {
+      // Hide all sections
+      document.querySelectorAll('section').forEach(section => {
+        section.classList.add('hidden');
+      });
+
+      // Show the selected section
+      document.getElementById(sectionId).classList.remove('hidden');
+    }
+
+    // Show the "About Me" section by default
+    showSection('about');
+  </script>
+</body>
+</html>
